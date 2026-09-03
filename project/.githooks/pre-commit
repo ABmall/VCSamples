@@ -1,0 +1,4 @@
+#!/bin/sh
+set -eu
+project_dir="$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$project_dir/scripts/Verificar-ChangelogPreparado.ps1" -ProjectDirectory "$project_dir"
